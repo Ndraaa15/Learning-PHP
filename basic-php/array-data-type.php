@@ -67,4 +67,22 @@ echo "\n";
 echo "Indra's city  : ";
 echo $identity["Address"]["City"];
 
+//array operator
+//$a + $b -> merge two array
+//$a == $b (equality) -> if array have same key and value will return true
+//$a === $b (identity)
+//$a != $b (inequality) -> checking if not same
+//$a !== $b (nonidentity)
+
+$fistname = [
+   "first" => "Indra",
+];
+
+$lastname = [
+   "last" => "Adi",
+];
+
+$full = $fistname + $lastname;
+var_dump($full);
+
 ?>
