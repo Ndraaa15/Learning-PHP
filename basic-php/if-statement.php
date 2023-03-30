@@ -19,4 +19,9 @@ elseif($grade < 70 && $grade > 50 && $absent < 7):
 else :
    echo "So bad".PHP_EOL;
 endif;
+
+//ternary operator
+$gender = "male";
+$greet = $gender == "male" ? "Hi, Bro" : "Hi, Noda";
+echo $greet.PHP_EOL;
 ?>
