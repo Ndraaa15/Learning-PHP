@@ -49,6 +49,6 @@ $students = [
             <li> <?=$student["NIM"]?> </li>
             <li> <?=$student["Major"]?> </li>
          </ul>
-      <?php endforeach ?>
+      <?php endforeach; ?>
    </body>
 </html>
