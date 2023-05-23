@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/Ndraaa15/Learning-PHP/assets/112854205/6c68c157-e4ca-4c72-ac5d-d2e2f85abaad" alt="gambar" />
+    <img src="https://github.com/Ndraaa15/Learning-PHP/assets/112854205/6c68c157-e4ca-4c72-ac5d-d2e2f85abaad" alt="php" />
 </p>
 
 
