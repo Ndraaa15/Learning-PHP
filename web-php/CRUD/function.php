@@ -66,4 +66,11 @@ function updateData ($data){
    
 }
 
+function search ($keywword){
+   $query = "SELECT * FROM students WHERE
+               NAME LIKE '%$keywword%'
+            ";
+   return Query($query);   
+}
+
 ?>

@@ -5,6 +5,11 @@ require 'function.php';
 $datas = Query("SELECT * FROM students");
 
 
+if (isset($_POST["search"])){
+   $datas = search($_POST["keyword"]);
+}
+
+
 // if (!$result) {
 //    echo mysqli_errno($db);
 // }
@@ -36,6 +41,11 @@ $datas = Query("SELECT * FROM students");
       <a href="create.php">Add Student</a>
       <br><br>
       
+      <form action="" method="post">
+         <input type="text" name="keyword" size="40" autofocus placeholder="Search Student" autocomplete="off">
+         <button type="submit" name="search">Search</button>
+      </form>
+      <br><br>
       <tr>
          <th>No</th>
          <th>Action</th>
@@ -45,9 +55,11 @@ $datas = Query("SELECT * FROM students");
          <th>Email</th>
          <th>Major</th>
       </tr>
+      <?php $i = 1; ?>
       <?php foreach ($datas as $data) : ?>
       <tr>
-         <td> <?php echo $data["NO"]; ?></td>
+         <td> <?php echo $i; ?></td>
+         
          <td>
             <a href="update.php?id=<?= $data["NO"]?>">Edit</a> | <a href="delete.php?id=<?= $data["NO"]; ?>" onclick="return confirm ('Are you sure delete this user ? ')">Delete</a>
          </td>
@@ -59,6 +71,7 @@ $datas = Query("SELECT * FROM students");
          <td><?php echo $data["EMAIL"]; ?></td>
          <td><?php echo $data["MAJOR"]; ?></td>
       </tr>
+      <?php $i+=1; ?>
       <?php endforeach; ?>
    </table>
 </body>
