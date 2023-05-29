@@ -49,7 +49,7 @@ $datas = Query("SELECT * FROM students");
       <tr>
          <td> <?php echo $data["NO"]; ?></td>
          <td>
-            <a href="update.php">Edit</a> | <a href="delete.php?id=<?= $data["NO"]; ?>" onclick="return confirm ('Are you sure delete this user ? ')">Delete</a>
+            <a href="update.php?id=<?= $data["NO"]?>">Edit</a> | <a href="delete.php?id=<?= $data["NO"]; ?>" onclick="return confirm ('Are you sure delete this user ? ')">Delete</a>
          </td>
          <td>
             <img src="../image/<?php echo $data["PHOTO"] ?>" width="50px" height="50px" alt="anya">

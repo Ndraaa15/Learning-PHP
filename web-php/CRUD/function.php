@@ -42,4 +42,28 @@ function deleteData ($ID){
    return mysqli_affected_rows($conn);
 }
 
+function updateData ($data){
+   global $conn;
+
+   $ID = htmlspecialchars($data["ID"]);
+   $PHOTO = htmlspecialchars($data["PHOTO"]);
+   $NIM = htmlspecialchars($data["NIM"]);
+   $NAME = htmlspecialchars($data["NAME"]);
+   $EMAIL = htmlspecialchars($data["EMAIL"]);
+   $MAJOR = htmlspecialchars($data["MAJOR"]);
+
+   //query for the data
+   $query = "UPDATE students SET
+               PHOTO = '$PHOTO',
+               NIM = '$NIM',
+               NAME = '$NAME',
+               EMAIL = '$EMAIL',
+               MAJOR = '$MAJOR'
+            WHERE NO = $ID";
+   mysqli_query($conn, $query);
+
+   return mysqli_affected_rows($conn);
+   
+}
+
 ?>
