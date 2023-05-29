@@ -1,14 +1,13 @@
 <!-- This page is for admin who can CRUD data -->
 <?php 
-//Connect to database
-$db = mysqli_connect("localhost", "root", "", "basic-php");
+require 'function.php';
 
-//Query data from database
-$result = mysqli_query($db, "SELECT * FROM students");
+$datas = Query("SELECT * FROM students");
 
-if (!$result) {
-   echo mysqli_errno($db);
-}
+
+// if (!$result) {
+//    echo mysqli_errno($db);
+// }
 
 //Fetch data from database
 //mysqli_fetch_row() -> return array numeric
@@ -19,7 +18,6 @@ if (!$result) {
 // while ($student = mysqli_fetch_assoc($result)) {
 //    var_dump($student["PHOTO"]);
 // }
-
 ?>
 
 
@@ -35,6 +33,8 @@ if (!$result) {
    <h1>Student List</h1>
 
    <table border="1px" cellpadding="10" cellspacing="0">
+      <a href="create.php">Add Student</a>
+      <br><br>
       
       <tr>
          <th>No</th>
@@ -45,23 +45,21 @@ if (!$result) {
          <th>Email</th>
          <th>Major</th>
       </tr>
-      <?php while ($data = mysqli_fetch_assoc($result)) : ?>
+      <?php foreach ($datas as $data) : ?>
       <tr>
          <td> <?php echo $data["NO"]; ?></td>
          <td>
-            <a href="">Edit</a> | <a href="">Delete</a>
+            <a href="update.php">Edit</a> | <a href="delete.php?id=<?= $data["NO"]; ?>" onclick="return confirm ('Are you sure delete this user ? ')">Delete</a>
          </td>
          <td>
-            <img src="../image/<?php echo 
-            
-            $data["PHOTO"] ?>" width="50px" height="50px" alt="anya">
+            <img src="../image/<?php echo $data["PHOTO"] ?>" width="50px" height="50px" alt="anya">
          </td>
          <td><?php echo $data["NIM"]; ?></td>
          <td><?php echo $data["NAME"]; ?></td>
          <td><?php echo $data["EMAIL"]; ?></td>
          <td><?php echo $data["MAJOR"]; ?></td>
       </tr>
-      <?php endwhile; ?>
+      <?php endforeach; ?>
    </table>
 </body>
 </html>
