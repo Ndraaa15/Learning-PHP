@@ -15,5 +15,9 @@
     ],
     "require": {
         "php": ">=8.0"
+    },
+    "scripts": {
+        "run-server": "php -S localhost:8000",
+        "hi": "echo 'Hi, I am Ndraaa15'"
     }
 }
