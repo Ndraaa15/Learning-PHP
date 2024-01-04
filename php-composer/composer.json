@@ -1,0 +1,13 @@
+{
+    "name": "ndraaa15/php-composer",
+    "description": "learning about php composer",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Ndraaa15\\PhpComposer\\": "src/"
+        }
+    },
+    "require": {
+        "monolog/monolog": "3.5.0"
+    }
+}

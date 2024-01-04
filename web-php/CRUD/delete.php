@@ -1,4 +1,4 @@
-<?php 
+<?php
 require 'function.php';
 
 //Getting the id (?id= ..) from the URL
@@ -17,6 +17,4 @@ if (deleteData($ID) > 0){
          document.location.href = 'index.php';
       </script>";
 }
-
-
 ?>

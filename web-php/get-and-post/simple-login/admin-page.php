@@ -8,7 +8,6 @@
 </head>
 <body>
    <h1>Welcome, Admin!</h1>
-
    <a href="login-page.php">Logout</a>
 </body>
 </html>

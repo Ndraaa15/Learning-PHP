@@ -8,3 +8,5 @@ include_once "myFunction.php";
 echo saySomething();
 
 ?>
+
+<!-- require if the file is mssing will return error but include just give waarning and program still running -->

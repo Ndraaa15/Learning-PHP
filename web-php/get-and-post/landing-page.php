@@ -10,3 +10,5 @@
    <h1>Welcome, <?php echo $_POST["name"]; ?></h1>
 </body>
 </html>
+
+<!-- Get the name value from $POST post.php -->

@@ -1,8 +1,3 @@
-<?php 
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,8 +12,6 @@
    <?php if(isset($_POST["submit"])) : ?>
       <h1>Welcome, <?php $_POST["name"] ?></h1>
    <?php endif; ?>
-
-
    <form action="landing-page.php" method="post">
       <label for="name">Name : </label>
       <input type="text" name="name">

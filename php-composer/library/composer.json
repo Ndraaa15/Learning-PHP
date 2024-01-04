@@ -1,0 +1,19 @@
+{
+    "name": "ndraaa15/create-library",
+    "description": "Learning create library using composer",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Ndraaa15\\CreateLibrary\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gede Indra Adi Brata",
+            "email": "indrabrata599@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0"
+    }
+}

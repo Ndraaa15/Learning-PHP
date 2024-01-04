@@ -1,4 +1,5 @@
-<?php 
+<?php
+   //check if the submit button is clicked or no
    if (isset($_POST["submit"])) {
       if ($_POST["username"] == "admin" && $_POST["password"] == "123") {
          header("Location: admin-page.php");
@@ -7,8 +8,6 @@
          $error = true;
       }
    }
-
-
 ?>
 
 

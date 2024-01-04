@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 //Connect to database
 $conn = mysqli_connect("localhost", "root", "", "basic-php");
 
@@ -70,7 +69,6 @@ function search ($keywword){
    $query = "SELECT * FROM students WHERE
                NAME LIKE '%$keywword%'
             ";
-   return Query($query);   
+   return Query($query);
 }
-
 ?>

@@ -1,5 +1,5 @@
 <!-- HTML inside PHP -->
-
+   
 <?php
    echo "<h2>White's room<h2>";
 ?>

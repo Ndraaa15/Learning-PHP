@@ -1,4 +1,5 @@
 <?php
+
 require "function.php";
 
 $conn = mysqli_connect ("localhost", "root", "", "basic-php");
@@ -18,9 +19,7 @@ if(isset($_POST["submit"])){
             document.location.href = 'index.php';
          </script>";
    }
-
 }
-
 ?>
 
 
@@ -64,10 +63,6 @@ if(isset($_POST["submit"])){
          <br>
          <button type="submit" name="submit">Add Student</button>
       </ul>
-
-
-
    </form>
-   
 </body>
 </html>

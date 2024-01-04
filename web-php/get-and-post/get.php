@@ -9,8 +9,8 @@
    // var_dump($_SESSION);
 
    //$_GET
-   $_GET["name"] = "Indra";
-   $_GET["age"] = 20;
+   // $_GET["name"] = "Indra";
+   // $_GET["age"] = 20;
    // var_dump("Name : " . $_GET["name"] .  PHP_EOL);
    // var_dump("Age : " . $_GET["age"] .  PHP_EOL);
 
@@ -40,7 +40,7 @@
    <body>
    <ul>
    <?php foreach ($students as $student) : ?>
-      <li> 
+      <li>
          <!-- The value name, nim, and major will be store in $_GET -->
          <a href="detail-student.php?name=<?= $student["Name"];?>&nim=<?= $student["NIM"];?>&major=<?= $student["Major"]?>"> <?=$student["Name"];?> </a>
       </li>

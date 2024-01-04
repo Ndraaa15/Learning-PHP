@@ -1,5 +1,5 @@
 <!-- This page is for admin who can CRUD data -->
-<?php 
+<?php
 require 'function.php';
 
 $datas = Query("SELECT * FROM students");

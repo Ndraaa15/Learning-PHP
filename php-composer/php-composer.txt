@@ -1,0 +1,36 @@
+Depedency management is a tool to manage library or external package
+
+For PHP its called composer
+
+The composer read file composer.json in the project and save depedency inside vendor folder 
+
+composer init -> to create a initial composer.json file (like go mod init)
+
+composer update -> to install depedency from composer.json and saved in composer.lock (the result of instalation depedency saved in vendor)
+
+composer install -> to install depedency based on composer.lock file (install depedency based on composer.lock file)
+
+WARNING : no need to push vendor folder to github
+
+By default the library that we used saved in vendor/autoload.php
+file autoload.php that can included all library or class that we need automatically, so we dont need to include one by one
+
+composer using PHP class autoloading to load library or class that we need (in vendor)
+we can also included our own class in autoload.php by adding this in composer.json
+
+"psr-4": {
+            "Ndraaa15\\PhpComposer\\": "src/"
+        }
+
+
+"psr-4" is a key that tell composer to autoload class in src folder with namespace Ndraaa15\PhpComposer
+
+composer dump-autoload -> to re-generate autoload.php file
+
+repository is a place that all depedency saved, by default composer using packagist.org as repository
+
+composer depedency can be installed globally or locally
+  require     -> using when apps running
+  require-dev -> using for development
+
+library
