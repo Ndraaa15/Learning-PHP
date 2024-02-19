@@ -1,0 +1,45 @@
+MVC -> Model View Controller
+
+Model -> Part representing the data that interacts with the database
+View -> Part representing the UI
+Controller -> Part representing the business logic (but this is not the only place where business logic can be, we can add service pattern and repository pattern to separate the business logic from the controller)
+
+<<File Structuring>>
+- Best practice for PHP is not expose all code that we make
+- Usually create a public folder and put all the files that we want to expose to the public
+- Create a folder called app and put all the files that we don't want to expose to the public
+- If we expose app folder, it will be a security risk because the client can see the code and the database connection
+
+<<Path Info>>
+- Information path that exist in the URL when accesing the website
+- Key that exist in global variable $_SERVER
+- $_SERVER['PATH_INFO'] -> get the path info from the URL
+- Example:
+- http://localhost:8080/index.php -> no path info
+- http://localhost:8080/index.php/abc -> path info is /abc
+- http://localhost:8080/index.php/abc/123 -> path info is /abc/123
+- http://localhost:8080/index.php/abc?id=123 -> path info is /abc
+- PATH_INFO is usually for URL Routing
+
+<<Routing>>
+- The routing process is MVC should be belong into controller class
+- When we create URL mapping we need to pair the PATH_INFO with the controller class and the method that will be executed
+
+<<Controller>>
+- Controller is a class that will handle the request from the user for the first time
+- Controller will handle the request and then call the model to get the data;
+- Handle logic businness and then call the view to display the data
+- Assign the class controller in the URL routing
+
+<<Path variable>>
+- Query or Parameter that exist in the URL
+- Example:
+- http://localhost:8080/index.php/abc?id=123 -> id is the path variable
+- http://localhost:8080/index.php/123 -> 123 the path variable
+- we can use regex to get the path variable
+
+<<Model>>
+- Model is actually data
+- Model is a class that will interact with the database
+- Model will handle the data and then return the data to the controller
+- Model usually use by controller then return to view

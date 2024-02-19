@@ -8,7 +8,7 @@ composer init -> to create a initial composer.json file (like go mod init)
 
 composer update -> to install depedency from composer.json and saved in composer.lock (the result of instalation depedency saved in vendor)
 
-composer install -> to install depedency based on composer.lock file (install depedency based on composer.lock file)
+composer install -> to install depedency based on composer.lock file (install depedency based on composer.lock file) or first time adding depedency
 
 WARNING : no need to push vendor folder to github
 
@@ -25,7 +25,7 @@ we can also included our own class in autoload.php by adding this in composer.js
 
 "psr-4" is a key that tell composer to autoload class in src folder with namespace Ndraaa15\PhpComposer
 
-composer dump-autoload -> to re-generate autoload.php file
+composer dump-autoload -> to re-generate autoload.php file or updating if that was autoload in composer.json
 
 repository is a place that all depedency saved, by default composer using packagist.org as repository
 

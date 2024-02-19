@@ -1,0 +1,27 @@
+{
+    "name": "ndraaa15/php-mvc",
+    "description": "Learning about MVC using PHP programming langugage",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Ndraaa15\\PhpMvc\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ndraaa15\\PhpMvc\\Tests\\": "test/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gede Indra Adi Brata",
+            "email": "indrabrata599@gmail.com"
+        }
+    ],
+    "require": {
+        "php" : ">=8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=9.5"
+    }
+}
